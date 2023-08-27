@@ -13,8 +13,9 @@ progress=document.getElementById("progress");
 const emailField=document.querySelector(".email-field"),
 emailInput=document.querySelector(".email"),
 passField=document.querySelector(".create-password"),
-passInput=document.querySelector(".password"),
-cPassField=document.querySelector(".confirm-password"),
+passInput=document.querySelector(".password");
+
+const cPassField=document.querySelector(".confirm-password"),
 cPassInput=document.querySelector(".cPassword");
 
 
@@ -37,15 +38,11 @@ back1.addEventListener("click", () =>{
     form2.style.left= "-450px";
     form3.style.left= "40px";
     progress.style.width="360px";
-    smallText.forEach((smallElement, index) => {
-        if (index === 3) {
-         smallElement.style.color="#fff";
-        }
-       
-       });
-    
+     
 
  });
+
+
  back2.addEventListener("click", () =>{
     form2.style.left= "40px";
     form3.style.left= "450px";
@@ -90,12 +87,17 @@ eyeIcon.addEventListener("click", () => {
 
 //Password validation
 function createPass(){
-    const passPattern=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$>%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
+    const passPattern= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$>%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    console.log(passPattern);
+   console.log(passInput.value);
   if(!passInput.value.match(passPattern)){
+    console.log(false);
       return  passField.classList.add("invalid");
+    }else{
+        passField.classList.remove("invalid");
+        console.log(true);
     }
-    passField.classList.remove("invalid");
+    
 }
 
 
