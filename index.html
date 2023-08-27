@@ -10,17 +10,64 @@
 </head>
 <body>
 <div class="container">
-    <header>Signup</header>
+    <div class="step-row">
 
-    <form action="https://yulduzb.github.io/Hospital-Project/">
+        <div id="progress"></div>
+        <div class="step-col"><small>Step 1</small></div>
+        <div class="step-col"><small>Step 2</small></div>
+        <div class="step-col"><small>Step 3</small></div>
+    </div>
+
+    <form id="form1">
+        <h3>Personal Details</h3>
+        <div class="input-field ">
+            <input type="text" placeholder="Enter your name">
+        </div>
+        <div class="input-field ">
+            <input type="text" placeholder="Enter your last name">
+        </div>
+        <div class="input-field ">
+            <input type="text" placeholder="Enter your phone number">
+
+        </div>
+      
+        
+        <div class="btn-box">
+          <button type="button" id="next1">Next</button>
+        </div>
+    </form>
+
+    <form id="form2">
+        <h3>Social Links</h3>
+        <div class="input-field ">
+            <input type="text" placeholder="Linkedin">
+        </div>
+        <div class="input-field ">
+            <input type="text" placeholder="Github">
+        </div>
+        <div class="input-field ">
+            <input type="text" placeholder="Twitter">
+
+        </div>
+
+        <div class="btn-box">
+            <button type="button" id="back1">Back</button>
+            <button type="button" id="next2">Next</button>
+          </div>
+    </form>
+   
+   
+
+    <form id="form3">
+        <h3>Create An Account</h3>
         <div class="field email-field">
             <div class="input-field ">
                 <input type="email" placeholder="Enter your email" class="email">
             </div>
-            <span class="error email-error">
+             <span class="error email-error">
                 <i class="bx bx-error-circle error-icon"></i>
                 <p class="error-text">Please enter a valid email</p>
-            </span>
+            </span> 
         </div>
         <div class="field create-password">
             <div class="input-field ">
@@ -46,10 +93,14 @@
                 <p class="error-text">Password don't match</p>
             </span>
         </div>
-        <div class="input-field field button">
-            <input type="submit" value="Submit Now">
+        <div class="btn-box">
+            
+            <button type="button" id="back2">Back</button>
+            <button type="submit" id="submit">Submit</button>
         </div>
     </form>
+
+    
 </div>
 
 

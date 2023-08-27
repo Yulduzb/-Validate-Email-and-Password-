@@ -8,40 +8,48 @@
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(135deg,#480ca8,#4cc9f0);
+    height: 100vh;
+    background: linear-gradient(135deg, #480ca8, #4cc9f0);
 }
 
 
 
 .container {
     position: relative;
-    max-width: 370px;
+    max-width: 360px;
     width: 100%;
-    margin-top: 100px;
+    height: 600px;
+    margin: 8% auto;
     padding: 25px;
-    border-radius: 8px;
+    border-radius: 5px;
     background: #fff;
+    overflow: hidden;
+  
 
 }
 
-.container header {
-    font-size: 22px;
-    font-weight: 600;
-    color: #333;
+.container h3 {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .container form {
-    margin-top: 30px;
+    position: absolute;
+    width: 280px;
+    top: 100px;
+    left: 40px;
+    background: transparent;
+    transition: 1s;
+
 
 }
 
-form .field {
-    margin-bottom: 20px;
+#form2 {
+    left: 450px;
+}
+
+#form3 {
+    left: 450px
 }
 
 
@@ -51,6 +59,18 @@ form .input-field {
     width: 100%;
 
 
+
+
+}
+
+#form1>.input-field,
+#form2>.input-field {
+    margin-bottom: 20px;
+}
+
+
+#form3>.field {
+    margin-bottom: 20px;
 }
 
 .input-field input {
@@ -63,8 +83,8 @@ form .input-field {
     border: 1px solid #d1d1d1;
 }
 
-.invalid input{
-border-color: #d93025;
+.invalid input {
+    border-color: #d93025;
 }
 
 .input-field .show-hide {
@@ -88,7 +108,7 @@ border-color: #d93025;
     display: none;
 }
 
-.invalid .error{
+.invalid .error {
     display: flex;
 }
 
@@ -106,22 +126,67 @@ border-color: #d93025;
     margin-top: 4px;
 }
 
-.button {
-    margin: 25px 0 6px;
 
+
+.btn-box {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
 }
 
-.button input {
+button {
+    width: 110px;
+    height: 35px;
     color: #fff;
+    border-radius: 50px;
+    border: 0;
+    outline: none;
+    margin: 0 10px;
     font-size: 16px;
     font-weight: 400;
-    background: #480ca8;
+    background: linear-gradient(135deg, #480ca8, #4cc9f0);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: backgroun 0.3s ease;
 }
 
-.button input:hover {
-    background: #afd5eb
+button:hover {
+    background: #6630bdf0;
 }
 
+.step-row {
+    display: flex;
+    align-items: center;
+    width: 360px;
+    height: 40px;
+    margin: -25px 0 0 -25px;
+    position: relative;
+    box-shadow: 0 -1px 5px -1px black;
 
+}
+
+.step-col{
+    width: 120px;
+    text-align: center;
+    position: relative;
+}
+
+#progress{
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(135deg, #4cc9f0,#480ca8);
+    transition: 1s;
+
+}
+
+#progress::after{
+   content: ' ';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top:0;
+    border-left: 20px solid #480ca8;
+}

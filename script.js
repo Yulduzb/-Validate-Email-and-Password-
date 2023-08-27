@@ -1,10 +1,52 @@
-const form=document.querySelector("form"),
-emailField=form.querySelector(".email-field"),
-emailInput=emailField.querySelector(".email"),
-passField=form.querySelector(".create-password"),
-passInput=passField.querySelector(".password"),
-cPassField=form.querySelector(".confirm-password"),
-cPassInput=cPassField.querySelector(".cPassword");
+
+const form1=document.getElementById("form1"),
+next1=document.getElementById("next1"),
+
+form2=document.getElementById("form2"),
+back1=document.getElementById("back1"),
+next2=document.getElementById("next2"),
+
+form3=document.getElementById("form3"),
+back2=document.getElementById("back2"),
+progress=document.getElementById("progress"),
+emailField=document.querySelector(".email-field"),
+emailInput=document.querySelector(".email"),
+passField=document.querySelector(".create-password"),
+passInput=document.querySelector(".password"),
+cPassField=document.querySelector(".confirm-password"),
+cPassInput=document.querySelector(".cPassword");
+
+
+next1.addEventListener("click", () =>{
+   form1.style.left= "-450px";
+   form2.style.left= "40px";
+   progress.style.width="240px";
+});
+
+back1.addEventListener("click", () =>{
+    form1.style.left= "40px";
+    form2.style.left= "450px";
+    progress.style.width="120px";
+ });
+
+ next2.addEventListener("click", () =>{
+    form2.style.left= "-450px";
+    form3.style.left= "40px";
+    progress.style.width="360px";
+ });
+ back2.addEventListener("click", () =>{
+    form2.style.left= "40px";
+    form3.style.left= "450px";
+    progress.style.width="240px";
+ });
+
+
+
+
+
+
+
+
 
 //email validation
 function checkEmail(){
@@ -61,7 +103,7 @@ function confirmPass(){
 
 //calling function on form submit
 
-form.addEventListener("submit", (e) => {
+form3.addEventListener("submit", (e) => {
     e.preventDefault();
     checkEmail();
     createPass();
@@ -79,7 +121,7 @@ if(
     !passField.classList.contains("invalid") &&
     !cPassField.classList.contains("invalid")
 ){
-    location.href=form.getAttribute("action");
+    location.href=form3.getAttribute("action");
 }
 });
 
