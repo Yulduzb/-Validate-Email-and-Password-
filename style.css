@@ -24,7 +24,7 @@ body {
     border-radius: 5px;
     background: #fff;
     overflow: hidden;
-  
+
 
 }
 
@@ -164,29 +164,32 @@ button:hover {
 
 }
 
-.step-col{
+.step-col {
     width: 120px;
     text-align: center;
     position: relative;
 }
 
-#progress{
+#progress {
     position: absolute;
     width: 120px;
     height: 100%;
-    background: linear-gradient(135deg, #4cc9f0,#480ca8);
+    background: linear-gradient(135deg, #b8dae4, #b08ee5);
     transition: 1s;
+    
 
 }
 
-#progress::after{
-   content: ' ';
+
+
+#progress::after {
+    content: ' ';
     height: 0;
     width: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     position: absolute;
     right: -20px;
-    top:0;
-    border-left: 20px solid #480ca8;
+    top: 0;
+    border-left: 20px solid #b08ee5;
 }

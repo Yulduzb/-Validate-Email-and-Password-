@@ -8,8 +8,9 @@ next2=document.getElementById("next2"),
 
 form3=document.getElementById("form3"),
 back2=document.getElementById("back2"),
-progress=document.getElementById("progress"),
-emailField=document.querySelector(".email-field"),
+progress=document.getElementById("progress");
+
+const emailField=document.querySelector(".email-field"),
 emailInput=document.querySelector(".email"),
 passField=document.querySelector(".create-password"),
 passInput=document.querySelector(".password"),
@@ -21,27 +22,36 @@ next1.addEventListener("click", () =>{
    form1.style.left= "-450px";
    form2.style.left= "40px";
    progress.style.width="240px";
+   
 });
 
 back1.addEventListener("click", () =>{
     form1.style.left= "40px";
     form2.style.left= "450px";
     progress.style.width="120px";
+  
+   
  });
 
  next2.addEventListener("click", () =>{
     form2.style.left= "-450px";
     form3.style.left= "40px";
     progress.style.width="360px";
+    smallText.forEach((smallElement, index) => {
+        if (index === 3) {
+         smallElement.style.color="#fff";
+        }
+       
+       });
+    
+
  });
  back2.addEventListener("click", () =>{
     form2.style.left= "40px";
     form3.style.left= "450px";
     progress.style.width="240px";
+    
  });
-
-
-
 
 
 
@@ -50,8 +60,8 @@ back1.addEventListener("click", () =>{
 
 //email validation
 function checkEmail(){
-    const emaipattern=/^[^ ]+[^ ]+\.[a-z]{2,3}$/;
-    if(!emailInput.value.match(emaipattern)){
+    const emailpattern=/^[^ ]+[^ ]+\.[a-z]{2,3}$/;
+    if(!emailInput.value.match(emailpattern)){
         return emailField.classList.add("invalid");
     }
     emailField.classList.remove("invalid");
